@@ -64,5 +64,9 @@ function handleComplete(evt,comp) {
 		<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:1080px; height:1920px; position: absolute; left: 0px; top: 0px; display: block;">
 		</div>
 	</div>
+
+	<audio hidden onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1500)">
+        <source src="../../assets/audio/scared.mp3" type="audio/ogg">
+    </audio>
 </body>
 </html>
