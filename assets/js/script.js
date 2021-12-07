@@ -32,7 +32,7 @@ async function main() {
     predictWebcam();
 
     // Compute every sec
-    await sleep(1000);
+    await sleep(700);
   }
 
   // Change scene to prompt
@@ -40,7 +40,7 @@ async function main() {
   zTransition("content2", "content1");
   changeSong(scenes["prompt"]["music"]);
   // sleep until prompt loads
-  await sleep(scenes["prompt"]["duration"] * 1000);
+  await sleep(scenes["prompt"]["duration"] * 700);
 
   annyang.resume();
 }
@@ -102,11 +102,11 @@ if (annyang) {
       document.getElementById("content1").src = scenes["angry"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["angry"]["music"]);
-      await sleep((scenes["angry"]["duration"] + 10) * 1000);
+      await sleep((scenes["angry"]["duration"] + 7) * 700);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep((scenes["end"]["duration"] + 7) * 1000);
+      await sleep((scenes["end"]["duration"] + 5) * 700);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -117,11 +117,11 @@ if (annyang) {
       document.getElementById("content1").src = scenes["happy"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["happy"]["music"]);
-      await sleep((scenes["happy"]["duration"] + 7) * 1000);
+      await sleep((scenes["happy"]["duration"] + 5) * 700);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep((scenes["end"]["duration"] + 10) * 1000);
+      await sleep((scenes["end"]["duration"] + 7) * 700);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -132,11 +132,11 @@ if (annyang) {
       document.getElementById("content1").src = scenes["sad"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["sad"]["music"]);
-      await sleep((scenes["sad"]["duration"] + 10) * 1000);
+      await sleep((scenes["sad"]["duration"] + 7) * 700);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep((scenes["end"]["duration"] + 7) * 1000);
+      await sleep((scenes["end"]["duration"] + 5) * 700);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -147,11 +147,11 @@ if (annyang) {
       document.getElementById("content1").src = scenes["scared"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["scared"]["music"]);
-      await sleep((scenes["scared"]["duration"] + 10) * 1000);
+      await sleep((scenes["scared"]["duration"] + 7) * 700);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep((scenes["end"]["duration"] + 7) * 1000);
+      await sleep((scenes["end"]["duration"] + 5) * 700);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
