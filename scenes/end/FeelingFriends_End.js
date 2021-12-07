@@ -140,7 +140,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,2034,2214);
 
 
 (lib.Tail = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -163,7 +163,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,615.2,521);
 
 
 (lib.Logo = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -185,7 +185,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,528,438);
 
 
 (lib.legright = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -208,7 +208,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,235,579.4);
 
 
 (lib.legleft = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -231,7 +231,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,235,579.4);
 
 
 (lib.endtext2 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -254,7 +254,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,1029.7,1120.8);
 
 
 (lib.Body_Face_Whiskers_R = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -277,7 +277,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,248.5,242.5);
 
 
 (lib.Body_Face_Whiskers_L = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -300,7 +300,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,248.5,242.5);
 
 
 (lib.Body_Face_MouthOpen_1 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -322,7 +322,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,412,271);
 
 
 (lib.Body_Face_EyesOpen_Pupils_1 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -345,7 +345,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,406.6,155.6);
 
 
 (lib.Body_Face_EyesOpen_Base_1 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -368,7 +368,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,374.2,143.2);
 
 
 (lib.Body_Face_EyesClosed_1 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -391,7 +391,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,365.1,83.8);
 
 
 (lib.Body_Face_Eyebrow_R = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -414,7 +414,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,106.6,78.8);
 
 
 (lib.Body_Face_Eyebrow_L = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -437,7 +437,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,106.6,78.8);
 
 
 (lib.Body_Face_Base_1 = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -460,7 +460,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,504,426.8);
 
 
 (lib.Body_Arm_R_Top = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -483,7 +483,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,295.5,490.9);
 
 
 (lib.Body_Arm_Front = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -505,7 +505,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,582,951);
 
 
 (lib.Body = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;
@@ -529,7 +529,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,729.7,888.3);
 
 // stage content:
 (lib.FeelingFriends_End = function(mode,startPosition,loop,reversed) {
-if (loop == null) { loop = true; }
+if (loop == null) { loop = false; }
 if (reversed == null) { reversed = false; }
 	var props = new Object();
 	props.mode = mode;

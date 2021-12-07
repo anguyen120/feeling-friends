@@ -24,15 +24,11 @@ function zTransition(activeId, oldId) {
 }
 
 let counter;
-let current;
 
 async function main() {
-  document.getElementById("content2").src = scenes["prompt"]["src"];
-
-  current = "neutral";
   counter = 0;
 
-  while (counter < 3) {
+  while (counter < 5) {
     predictWebcam();
 
     // Compute every sec
@@ -40,20 +36,28 @@ async function main() {
   }
 
   // Change scene to prompt
-  current = "prompt";
+  document.getElementById("content2").src = scenes["prompt"]["src"];
   zTransition("content2", "content1");
-  changeSong(scenes[current]["music"]);
+  changeSong(scenes["prompt"]["music"]);
   // sleep until prompt loads
-  await sleep(scenes[current]["duration"] * 1000);
+  await sleep(scenes["prompt"]["duration"] * 1000);
 
   annyang.resume();
 }
 
 // Activate the webcam stream.
 navigator.mediaDevices
-  .getUserMedia({ video: true, audio: true })
+  .getUserMedia({ video: true })
   .then(function (stream) {
     video.srcObject = stream;
+  })
+  .catch(function (err) {
+    alert("getUserMedia() is not supported by your browser");
+  });
+
+  navigator.mediaDevices
+  .getUserMedia({ audio: true })
+  .then(function (stream) {
   })
   .catch(function (err) {
     alert("getUserMedia() is not supported by your browser");
@@ -71,7 +75,6 @@ cocoSsd.load().then(function (loadedModel) {
   zTransition("content1", "waiting");
   // Clear loading animation since we no longer need it.
   document.getElementById("waiting").remove();
-
   main();
 });
 
@@ -96,14 +99,14 @@ if (annyang) {
   var commands = {
     angry: async function () {
       annyang.pause();
-      document.getElementById("content1").src = scenes[current]["src"];
+      document.getElementById("content1").src = scenes["angry"]["src"];
       zTransition("content1", "content2");
-      changeSong(scenes[current]["music"]);
-      await sleep(scenes[current]["duration"] * 1000);
+      changeSong(scenes["angry"]["music"]);
+      await sleep((scenes["angry"]["duration"] + 10) * 1000);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep(scenes["end"]["duration"] * 1000);
+      await sleep((scenes["end"]["duration"] + 7) * 1000);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -111,14 +114,14 @@ if (annyang) {
     },
     happy: async function () {
       annyang.pause();
-      document.getElementById("content1").src = scenes[current]["src"];
+      document.getElementById("content1").src = scenes["happy"]["src"];
       zTransition("content1", "content2");
-      changeSong(scenes[current]["music"]);
-      await sleep(scenes[current]["duration"] * 1000);
+      changeSong(scenes["happy"]["music"]);
+      await sleep((scenes["happy"]["duration"] + 7) * 1000);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep(scenes["end"]["duration"] * 1000);
+      await sleep((scenes["end"]["duration"] + 10) * 1000);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -126,14 +129,14 @@ if (annyang) {
     },
     sad: async function () {
       annyang.pause();
-      document.getElementById("content1").src = scenes[current]["src"];
+      document.getElementById("content1").src = scenes["sad"]["src"];
       zTransition("content1", "content2");
-      changeSong(scenes[current]["music"]);
-      await sleep(scenes[current]["duration"] * 1000);
+      changeSong(scenes["sad"]["music"]);
+      await sleep((scenes["sad"]["duration"] + 10) * 1000);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep(scenes["end"]["duration"] * 1000);
+      await sleep((scenes["end"]["duration"] + 7) * 1000);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -141,14 +144,14 @@ if (annyang) {
     },
     scared: async function () {
       annyang.pause();
-      document.getElementById("content1").src = scenes[current]["src"];
+      document.getElementById("content1").src = scenes["scared"]["src"];
       zTransition("content1", "content2");
-      changeSong(scenes[current]["music"]);
-      await sleep(scenes[current]["duration"] * 1000);
+      changeSong(scenes["scared"]["music"]);
+      await sleep((scenes["scared"]["duration"] + 10) * 1000);
       document.getElementById("content2").src = scenes["end"]["src"];
       zTransition("content2", "content1");
       changeSong(scenes["end"]["music"]);
-      await sleep(scenes["end"]["duration"] * 1000);
+      await sleep((scenes["end"]["duration"] + 7) * 1000);
       document.getElementById("content1").src = scenes["neutral"]["src"];
       zTransition("content1", "content2");
       changeSong(scenes["neutral"]["music"]);
@@ -158,10 +161,6 @@ if (annyang) {
 
   // Add our commands to annyang
   annyang.addCommands(commands);
-
-  annyang.addCallback("resultMatch", function (userSaid, commandText, phrases) {
-    current = commandText;
-  });
 
   // Start listening. You can call this here, or attach this call to an event, button, etc.
   annyang.start();
