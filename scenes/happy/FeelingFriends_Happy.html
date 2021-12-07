@@ -65,7 +65,7 @@ function handleComplete(evt,comp) {
 		</div>
 	</div>
 
-	<audio id="audio" autoplay hidden>
+	<audio hidden onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 1750)">
         <source src="../../assets/audio/happy.mp3" type="audio/ogg">
     </audio>
 </body>
