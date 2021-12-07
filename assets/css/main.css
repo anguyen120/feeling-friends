@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: in 2s;
+}
+
+.fadeOut {
+  animation: out 2s;
+  animation-fill-mode: forwards;
+}

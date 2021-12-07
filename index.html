@@ -8,27 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body>
-    <h1>Feeling and Friends</h1>
+    <audio id="audio" autoplay loop hidden>
+        <source id="music" src="assets/music/neutral.mp3" type="audio/ogg">
+    </audio>
 
-    <section id="demos" class="invisible">
-        <div id="liveView" class="videoView">
-            <button id="webcamButton">Enable Webcam</button>
-            <video id="webcam" autoplay></video>
-        </div>
-    </section>
+    <div id="container">
+        <iframe id="waiting" type="text/html" src="scenes/waiting/FeelingFriends_Waiting.html" width="1080px" height="1920px"></iframe>
+        <iframe id="content1" type="text/html" src="scenes/neutral/FeelingFriends_Neutral_Final.html" width="1080px" height="1920px"></iframe>
+        <iframe id="content2" type="text/html" width="1080px" height="1920px"></iframe>
+    </div>
+
+    <div id="liveView" class="videoView">
+        <video id="webcam" autoplay hidden muted></video>
+    </div>
 
     <!-- Import TensorFlow.js library -->
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js" type="text/javascript"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js" type="text/javascript"></script>
     <!-- Load the coco-ssd model to use to recognize things in images -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
 
+    <!-- Load the speech commands model to use to recognize speech -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+
     <!-- Import the page's JavaScript to do some stuff -->
-    <script src="/script.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/config.js"></script>
 </body>
 
 </html>
