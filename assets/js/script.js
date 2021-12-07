@@ -10,8 +10,6 @@ function changeSong(song) {
   audio.play();
 }
 
-changeSong(scenes["neutral"]["music"]);
-
 function zTransition(activeId, oldId) {
   const activeIFrame = document.getElementById(activeId);
   const oldIFrame = document.getElementById(oldId);
